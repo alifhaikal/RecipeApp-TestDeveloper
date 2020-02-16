@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dm_20">
+
+        <EditText
+            android:id="@+id/etRecipeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/recipe_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivRecipeAddImage"
+            android:layout_width="@dimen/dm_200"
+            android:layout_height="@dimen/dm_200"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dm_30"
+            android:background="@color/darker_gray"
+            android:src="@drawable/image"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@id/etRecipeName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/etRecipeIngredient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hintIngredients"
+            android:layout_marginTop="@dimen/dm_30"
+            app:layout_constraintTop_toBottomOf="@id/ivRecipeAddImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/etRecipeSteps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hintSteps"
+            android:layout_marginTop="@dimen/dm_30"
+            android:layout_marginBottom="@dimen/dm_20"
+            app:layout_constraintTop_toBottomOf="@id/etRecipeIngredient"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/btnUpdateRecipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_recipe"
+            android:textSize="@dimen/tv_20"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/dm_20"
+            app:layout_constraintTop_toBottomOf="@id/etRecipeSteps"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

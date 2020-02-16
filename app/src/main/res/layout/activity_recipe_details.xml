@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivRecipeDetails"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dm_300"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvIngredients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/ingredients"
+            android:textSize="@dimen/tv_30"
+            android:layout_margin="@dimen/dm_20"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/ivRecipeDetails"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvRecipeDetailsIngredient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tv_17"
+            android:layout_marginStart="@dimen/dm_20"
+            android:layout_marginEnd="@dimen/dm_20"
+            android:layout_marginBottom="@dimen/dm_20"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/tvIngredients"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvSteps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/steps"
+            android:textSize="@dimen/tv_30"
+            android:layout_margin="@dimen/dm_20"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/tvRecipeDetailsIngredient"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvRecipeDetailsSteps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tv_17"
+            android:layout_marginStart="@dimen/dm_20"
+            android:layout_marginEnd="@dimen/dm_20"
+            android:layout_marginBottom="@dimen/dm_20"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/tvSteps"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
